@@ -32,11 +32,7 @@ For more info see [Flash Software](#flash-software).
 ## DIY Hardware
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=-Gmv98tUiYw">
-    <img alt="WiFi Duck Hardware Tutorial Video Thumbnail" src="https://img.youtube.com/vi/-Gmv98tUiYw/maxresdefault.jpg" width="400">
-    <br>
-    <b>Watch the video tutorial</b>
-  </a>
+
 </p>
 
 To build a WiFi Duck yourself, you need the following hardware:  
@@ -108,13 +104,7 @@ To add a Neopixel (WS2812b) LED:
 
 ## Flash Software
 
-<p align="center">
-  <a href="https://youtu.be/VQAzxBefLZo">
-    <img alt="WiFi Duck Hardware Tutorial Video Thumbnail" src="https://img.youtube.com/vi/VQAzxBefLZo/maxresdefault.jpg" width="400">
-    <br>
-    <b>Watch the video tutorial</b>
-  </a>
-</p>
+
 
 1. Download and install the [Arduino IDE](https://www.arduino.cc/en/main/software).
 2. Start the Arduino IDE, go to `File` > `Preferences`.
@@ -351,7 +341,7 @@ The ASCII array has a fixed size. Each row describes a key.
 First a modifier key like `KEY_MOD_LSHIFT`, then a character key.
 Some ASCII characters can't be typed or don't require a modifier,
 that's where you must place `KEY_NONE`.
-Check [usb_hid_keys.h](https://github.comjatinkartik/Airlink-Console/blob/master/atmega_duck/usb_hid_keys.h) for the available keys.  
+Check [usb_hid_keys.h](https://github.com/jatinkartik/Airlink-Console/blob/master/atmega_duck/usb_hid_keys.h) for the available keys.  
 If multiple modifiers are required, you must use a bitwise OR to connect them: `KEY_MOD_RALT | KEY_MOD_LSHIFT`.  
 For example, in [locale_de.h](https://github.com/jatinkartik/Airlink-Console/blob/master/atmega_duck/locale_de.h#L136) `Z` is saved as `KEY_MOD_LSHIFT, KEY_Y`.  
 This is because German keyboards use QWERTZ instead of the QWERTY layout
