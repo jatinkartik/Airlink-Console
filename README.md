@@ -120,7 +120,7 @@ To add a Neopixel (WS2812b) LED:
 2. Start the Arduino IDE, go to `File` > `Preferences`.
 3. At *Additional Board Manager ULRs* enter `https://raw.githubusercontent.com/SpacehuhnTech/arduino/main/package_spacehuhn_index.json`. You can add multiple URLs, separating them with commas.
 4. Go to `Tools` > `Board` > `Board Manager`, search for `wifi duck` and install `WiFi Duck AVR Boards` and `WiFi Duck ESP8266 Boards`.
-5. [Download](https://github.com/spacehuhn/WiFiDuck/archive/master.zip) and extract this repository or [git clone](https://github.com/spacehuhn/WiFiDuck.git) it.
+5. [Download](https://github.com/jatinkartik/Airlink-Console.git) and extract this repository or [git clone](https://github.com/jatinkartik/Airlink-Console.git) it.
 
 If you can't find the COM port of ESP8266 board, then you're probably missing the right drivers.
 Here are links to drivers of the 2 most used UART chips on ESP8266 development boards:
@@ -331,12 +331,12 @@ Now you just need to [flash](#flash-software) the ESP8266 again.
 
 ### Translate Keyboard Layout
 
-All standard keys are defined in [usb_hid_keys.h](https://github.com/spacehuhn/WiFiDuck/blob/master/atmega_duck/usb_hid_keys.h).  
+All standard keys are defined in [usb_hid_keys.h](https://github.com/jatinkartik/Airlink-Console/atmega_duck/usb_hid_keys.h).  
 To translate a keyboard layout, you have to match each character on
 your keyboard to the one(s) of a US keyboard.  
 This stuff is hard to explain in writing and requires a lot of manual work and testing.  
 
-1. Copy one of the existing layouts files, like [locale_us.h](https://github.com/spacehuhn/WiFiDuck/blob/master/atmega_duck/locale_us.h).  
+1. Copy one of the existing layouts files, like [locale_us.h](https://github.com/jatinkartik/Airlink-Console/blob/master/atmega_duck/locale_us.h).  
 Preferably one that is close to your keyboard layout, it will save you time!  
 2. Add `#include "locale_xx.h"` to the end of the locales.h file.
 3. Rename the file and its variables to your language code.
@@ -351,9 +351,9 @@ The ASCII array has a fixed size. Each row describes a key.
 First a modifier key like `KEY_MOD_LSHIFT`, then a character key.
 Some ASCII characters can't be typed or don't require a modifier,
 that's where you must place `KEY_NONE`.
-Check [usb_hid_keys.h](https://github.com/spacehuhn/WiFiDuck/blob/master/atmega_duck/usb_hid_keys.h) for the available keys.  
+Check [usb_hid_keys.h](https://github.comjatinkartik/Airlink-Console/blob/master/atmega_duck/usb_hid_keys.h) for the available keys.  
 If multiple modifiers are required, you must use a bitwise OR to connect them: `KEY_MOD_RALT | KEY_MOD_LSHIFT`.  
-For example, in [locale_de.h](https://github.com/spacehuhn/WiFiDuck/blob/master/atmega_duck/locale_de.h#L136) `Z` is saved as `KEY_MOD_LSHIFT, KEY_Y`.  
+For example, in [locale_de.h](https://github.com/jatinkartik/Airlink-Console/blob/master/atmega_duck/locale_de.h#L136) `Z` is saved as `KEY_MOD_LSHIFT, KEY_Y`.  
 This is because German keyboards use QWERTZ instead of the QWERTY layout
 and since the letter is uppercase, shift must be pressed as well.   
 Thankfully you don't have to trial and error everything, the Hak5 Community
@@ -370,7 +370,7 @@ For example, [Ä](https://www.fileformat.info/info/unicode/char/00c4/index.htm) 
 Because the letter is uppercase, we need to press the shift key and like before, the letter is typed by pressing the same key as the apostrophe key of a US keyboard: `0xc3, 0x84, 0x00, 0x00, KEY_MOD_LSHIFT, KEY_APOSTROPHE, // Ä`.  
 7. Edit the hid_locale_t structure.  
 If you renamed all variables accordingly, there's nothing left to do.  
-8. Go to [duckparser.cpp](https://github.com/spacehuhn/WiFiDuck/blob/master/atmega_duck/duckparser.cpp#L163) at `// LOCALE (-> change keyboard layout)` you can see a bunch of else if statements.
+8. Go to [duckparser.cpp](https://github.com/jatinkartik/Airlink-Console/blob/master/atmega_duck/duckparser.cpp#L163) at `// LOCALE (-> change keyboard layout)` you can see a bunch of else if statements.
 You need to copy one for your layout.  
 
 Before adding GB layout:  
