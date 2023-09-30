@@ -42,3 +42,6 @@ save-commands.json
 *.hex
 
 *.uf2
+
+
+# git ignore content end 
