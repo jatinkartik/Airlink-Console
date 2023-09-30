@@ -17,7 +17,7 @@ from within a web interface. This means that, unlike other BadUSBs, you don't ne
 A custom designed development board which comes preflashed with this software by Travis Lin.  
 
 You can update the ESP8266 over the air and flash the Atmega32u4 via Arduino, all while enclosed in its neat little case.  
-📺 **[Watch the How to Update Tutorial here](https://youtu.be/e3-nsOjclsY)**.
+
 
 If you wish to develop your own software or help improve this one, 
 the 8-bit DIP-switch makes it easy for you to access the Atmega32u4 or ESP8266 independently. 
